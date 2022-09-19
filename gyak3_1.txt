@@ -1,0 +1,31 @@
+feladat boolean:
+// control statement
+
+
+#include <stdio.h>
+#include <stdbool.h> // C99
+
+int main(int argc, char const *argv[])
+{
+  int number;
+  bool ok;
+
+  do{
+    ok = true;
+    printf("Gimmie a number: ");
+    if (scanf("%i", &number) != 1)
+    {
+        ok = false;
+        printf("NOT GUD! BAD!\n");
+        // Clear the input buffer
+        while(getchar() != '\n')
+        {
+
+        }
+    }
+  }while(!ok);
+
+  printf("Your number is %i\n", number);
+}
+
+feladat:
